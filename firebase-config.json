@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "chatbot-cc3c8",
+  "private_key_id": "8babf6724928fbc5e85cdf27de2f6271af470f7c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDSLyZlyzvu0v7T\nNFHqhnAQud12YS/Xcm6467d80TP1vk/QVccDFgcYD1xK13f5ALSvym0KQuA/Dx0h\nR4i0Lxl6l4Lltrwp1O2yd2wVIyTfLnhInU11n5kZHM037HE6Fx4+X0RgAI7NtCT2\nVKInVmbG709rd1VOVez6x22c3Q3bZClg91G9s2x3sHreHPrl4dlauEGWIhUWy+Dz\nm0/E8KdAPGr8tsnBkxqoR2zRjR5fhnR1mx2jcxhkjm4vbFAm8Yjrf8jIBAl6rEG4\nAJUY51ZhUoqpTubLVzuCimpuwMQCL8HHgIbAPv2fBpWQ20PSVKs+HQcjPWJqu8ET\nJgAWu7j1AgMBAAECggEAHND/EYdkJPxY7emnQ3asEvb7QHmBntG0Zsury+6TZ6FF\n0w6M6u+QXcGZXzTHC49dC8Q+iotxsDjpFFYjjW9EWH+WStqbVfGN/Iu3+KE+sw9C\nyX3bkAFSHanKZFzuhyQtRCg5OR+fyd8QDuplPZcbHzInMC4xDBI8G9kkvj67tsoh\n6JmPbFQkGCpw2zV6BmC62c97Ipzvdlaua1vIQLhhjLbWzoEY8RaWFhr6zComh2Uz\nVCPGvgLsmiJSDSKUGbwszAIXLNM2YhyRddItp50ciqirY621cNTXd71d/wf7TRgF\nQFGE+o2xVC6/rmyK99APCvq5R12F1J/bJnjpPdBJPwKBgQDvl+JPrLrlZp9r6ITi\nxT532f71GH+KLWq3rxQXHWlkkkzBAexjzwxJWZ9ZkeYFFoCdKpn7/I5W4MJU4rPN\nvWTSPEJ5JctEnfsAbFdJLUW+GXQuY+XL006/5CHnd38gEPCZgxQvcQ5G6dK+ep7P\n2KKzyHPbt6nO12ehWcdPY+mgrwKBgQDgk7fzIp1aQVR/OIBeVZ7F4uosLv8kbM0x\neNoHROzgefKB/d7T/q/ZiSqgJN4XVkduanrMQBA4l84gPRWyteYV4iISpAeHqHbc\nIWeU8yelsA91kPsxDaZqnKHacmRivNZMkeXaaRMYckYj6eu+pV1Xf5BAU1wUQeny\nmAdIMfVBmwKBgQCW5hYHEEb1zFiD4gIvwQLDAW1ueGt7X3djEMWaeU+zo+Drfoaf\npfubBvMxuo4gjjeaxQYOitYrKYu7YrzTy4EAWCuVmZQYN1eqwJGI6RaP0AA4Z3qH\nkSJ8APbJjZ1nWMPwK3o/Fvli+Ele5mO3jD2M9abirx4nw8rk+GJrQgYWyQKBgBVp\n4GtdjJVzj0QGNi9IiLgjt+J4pLlranFiLZ/t0Yxh9F6yv1GFgm0CqD7W5RpijrMX\nkhfxr9pFl1D5oh0FPSgvBMK0Q0eLJ7I7uS25tbkVvZOfPGRkAc8+mixDJhFIIkLw\n0nLt+/UjyE5aWrE2AV17e1y21hvUYSNRnbgjk1grAoGBANGX1uBVqcizpA7wHZcD\naDBRVsGWY+eSdOYEeT8sJk6xitV/0zHMnRIkJbqz8RsfHFhxXJ6aehVLuvc9GNz4\n9wyePQtwpGnHbOaXQRMlNPsBs0hZbrma3JJjCQahzAuCzRwuoThRMq/xJWNMSoZz\nfvwn5THepDL/5T7OSKsjbBno\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@chatbot-cc3c8.iam.gserviceaccount.com",
+  "client_id": "106404273183906730165",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40chatbot-cc3c8.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
