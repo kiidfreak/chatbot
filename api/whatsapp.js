@@ -1,7 +1,6 @@
 const twilio = require("twilio");
 const admin = require("firebase-admin");
 const fetch = require("node-fetch");
-const OpenAI = require("openai");
 require("dotenv").config();
 
 const serviceAccount = require("../firebase-config.json");
@@ -9,13 +8,8 @@ const serviceAccount = require("../firebase-config.json");
 if (!admin.apps.length) {
   admin.initializeApp({ credential: admin.credential.cert(serviceAccount) });
 }
-
 const client = new twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 const twilioNumber = "whatsapp:+14155238886";
-
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
 
 async function handler(req, res) {
     try {
@@ -30,7 +24,15 @@ async function handler(req, res) {
             return res.status(400).json({ error: "Invalid message format" });
         }
 
-        let responseMessage = await getAIResponse(message);
+        let responseMessage = "";
+
+        if (message.includes("hello")) {
+            responseMessage = "🌍 Welcome to the Travel Assistant! Select a category:\n1️⃣ Restaurants\n2️⃣ Accommodation";
+        } else if (message.includes("weather")) {
+            responseMessage = await getWeather("Nairobi");
+        } else {
+            responseMessage = "Sorry, I didn't understand that.";
+        }
 
         await client.messages.create({
             from: twilioNumber,
@@ -45,22 +47,19 @@ async function handler(req, res) {
     }
 }
 
-async function getAIResponse(userMessage) {
-    try {
-        const response = await openai.chat.completions.create({
-            model: "gpt-4",
-            messages: [
-                { role: "system", content: "You are a helpful AI-powered travel assistant for WhatsApp users. Help users with travel advice, weather, restaurant recommendations, and accommodations." },
-                { role: "user", content: userMessage },
-            ],
-            max_tokens: 200,
-        });
+async function getWeather(city) {
+  const apiKey = process.env.OPENWEATHER_API_KEY;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-        return response.choices[0].message.content.trim();
-    } catch (error) {
-        console.error("Error fetching AI response:", error);
-        return "Sorry, I'm having trouble generating a response right now.";
-    }
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("Weather API Error");
+    const data = await response.json();
+    return `Weather in ${city}: ${data.weather[0].description}, Temp: ${data.main.temp}°C`;
+  } catch (error) {
+    console.error("Error fetching weather:", error);
+    return "Sorry, I couldn't fetch the weather right now.";
+  }
 }
 
-module.exports = handler;
+module.exports = handler;
